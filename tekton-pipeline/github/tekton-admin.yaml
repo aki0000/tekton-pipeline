@@ -3,5 +3,5 @@ kind: ServiceAccount
 metadata:
   creationTimestamp: null
   name: tekdon-admin
-secrets;
+secrets:
   - name: github-token

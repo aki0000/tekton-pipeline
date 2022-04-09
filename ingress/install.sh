@@ -1,3 +1,4 @@
+#!/bin/sh
 # Deploy ingress for tekton pipeline
 kubectl apply -f ingress.yaml
 
