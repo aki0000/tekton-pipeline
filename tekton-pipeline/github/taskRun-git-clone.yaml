@@ -1,16 +1,15 @@
 apiVersion: tekton.dev/v1beta1
 kind: TaskRun
 metadata:
-  creationTimestamp: null
   generateName: git-clone-java-sample-run-
 spec:
-  serviceAccountName: "tekton-admin"
+  serviceAccountName: tekton-admin
   taskRef:
     name: git-clone
-workspaces:
-  - name: output
-    persistentVolumeClaim:
-      calimeName: java-sample
+# workspaces:
+#   - name: output
+#     persistentVolumeClaim:
+#       claimeName: java-sample
 params:
   - name: url
     value: https://github.com/___GITHUB_USER___/tekton-pipeline.git
