@@ -14,5 +14,5 @@ workspaces:
 params:
   - name: url
     value: https://github.com/___GITHUB_USER___/tekton-pipeline.git
-  - name revision
+  - name: revision
     value: master
