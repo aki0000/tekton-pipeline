@@ -1,7 +1,12 @@
 # tekton-pipeline
 
-Deploy tekton pipeline into your cluster.
+Deploy tekton pipeline/dashbord into your cluster.
 
 ```
-kubectl apply -f release.yaml
+# Deploy
+kubectl apply -f ./
+
+# Port forward dashboard port 
+kubectl --namespace tekton-pipelines port-forward svc/tekton-dashboard 9097:9097
+
 ```
