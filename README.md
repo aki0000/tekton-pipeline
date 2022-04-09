@@ -10,3 +10,5 @@ kubectl apply -f ./
 kubectl --namespace tekton-pipelines port-forward svc/tekton-dashboard 9097:9097
 
 ```
+
+Access to `http://localhost:9097` on your browser.
