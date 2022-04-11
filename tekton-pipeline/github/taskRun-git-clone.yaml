@@ -6,12 +6,17 @@ spec:
   serviceAccountName: tekton-admin
   taskRef:
     name: git-clone
-# workspaces:
-#   - name: output
-#     persistentVolumeClaim:
-#       claimeName: java-sample
-params:
-  - name: url
-    value: https://github.com/___GITHUB_USER___/tekton-pipeline.git
-  - name: revision
-    value: master
+  workspaces:
+    - name: output
+      volumeClaimTemplate: 
+        spec:
+          accessModes:
+          - ReadWriteOnce
+          resources:
+            requests:
+              storage: 100Mi
+  params:
+    - name: url
+      value: https://github.com/___GITHUB_USER___/tekton-pipeline.git
+    - name: revision
+      value: main
