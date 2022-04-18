@@ -1,6 +1,6 @@
 #!/bin/sh
-export GITHUB_USER=""
+export GITLAB_USER=""
 
 # Craete secret for GitHub Token
-sed -e "s;___GITHUB_USER___;${GITHUB_USER};g" \
-./taskRun-git-clone.yaml | kubectl create -f -
+sed -e "s;___GITLAB_USER___;${GITLAB_USER};g" \
+./taskRun-bookinfo.yaml | kubectl create -f -

@@ -4,4 +4,4 @@ metadata:
   creationTimestamp: null
   name: tekton-admin
 secrets:
-  - name: github-token
+  - name: gitlab-token

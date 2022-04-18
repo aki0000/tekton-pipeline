@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: TaskRun
 metadata:
-  generateName: git-clone-java-sample-run-
+  generateName: git-clone-bookinfo-run-
 spec:
   serviceAccountName: tekton-admin
   taskRef:
@@ -17,6 +17,6 @@ spec:
               storage: 100Mi
   params:
     - name: url
-      value: https://github.com/___GITHUB_USER___/tekton-pipeline.git
+      value: https://gitlab.com/___GITLAB_USER___/bookinfo.git
     - name: revision
       value: main
